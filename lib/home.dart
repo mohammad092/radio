@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:tete/lili.dart';
+import 'package:tete/radio.dart';
 
 class Home extends StatefulWidget {
   @override
@@ -14,7 +14,8 @@ class _HomeState extends State<Home> {
         title: Text('radio')
       ),
       body: Center(
-        child: Coco(
+        // هنا قمنا باستخدام الباراميترز
+        child: CustomRadio(
           text1:'hello',
           text2: 'Seccond text',
         ),

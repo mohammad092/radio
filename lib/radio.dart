@@ -1,14 +1,16 @@
 import 'package:flutter/material.dart';
 
-class Coco extends StatefulWidget {
+ class CustomRadio extends StatefulWidget {
+  // هنا قمنا باضافة ال  المتغيرات
   final String text1;
   final String text2;
-  Coco({Key key, @required  this.text1, @required this.text2}) : super(key:key);
+  // هنا قمنا بتمرير الباراميترز
+  CustomRadio({Key key, @required  this.text1, @required this.text2}) : super(key:key);
 @override
-  _CocoState createState() => _CocoState();
+  _CustomRadioState createState() => _CustomRadioState();
 }
 
-class _CocoState extends State<Coco> {
+ class _CustomRadioState extends State<CustomRadio> {
  int val;
 
   @override
@@ -16,6 +18,7 @@ class _CocoState extends State<Coco> {
     return Column(
       children: <Widget>[
         RadioListTile(
+          // هنا قمنا بتعريف الباراميتر الاول
           title: Text(widget.text1),
           value: 1,
           groupValue: val,
@@ -26,6 +29,7 @@ class _CocoState extends State<Coco> {
           },
         ),
         RadioListTile(
+          // وهنا الثاني
           title: Text(widget.text2),
           value: 2,
           groupValue: val,
